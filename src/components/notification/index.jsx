@@ -12,6 +12,7 @@ export default function Notification() {
 
   return (
     <div
+      role='alert'
       className={`${
         "mt-" + pos
       } absolute w-[21rem] h-20 rounded-lg bg-emerald-900 p-4 duration-500 -top-20`}

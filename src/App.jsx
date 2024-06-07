@@ -61,8 +61,9 @@ function App() {
           <h1 className='text-2xl font-bold text-Grey900 mb-2'>Contact Us</h1>
           <div className='flex flex-col md:flex-row gap-3 justify-around'>
             <div className='flex flex-col flex-grow'>
-              <label>First Name</label>
+              <label htmlFor='first-name'>First Name</label>
               <input
+                id='first-name'
                 required
                 ref={nameInput}
                 className={`border-[.5px] border-Grey500 hover:border-Green600 focus:border-Green600 focus:bg-Green200 focus:outline-none h-8 pl-3  rounded-md ${
@@ -74,8 +75,9 @@ function App() {
               </a>
             </div>
             <div className='flex flex-col flex-grow'>
-              <label>Last Name</label>
+              <label htmlFor='last-name'>Last Name</label>
               <input
+                id='last-name'
                 required
                 ref={lastNameInput}
                 className={`border-[.5px] border-Grey500 hover:border-Green600  focus:border-Green600 focus:bg-Green200 focus:outline-none h-8 pl-3 rounded-md ${
@@ -89,8 +91,9 @@ function App() {
           </div>
           <div>
             <div className='flex flex-col flex-grow'>
-              <label>Email Address</label>
+              <label htmlFor='email-address'>Email Address</label>
               <input
+                id='email-address'
                 required
                 ref={mailInput}
                 className={`
@@ -105,9 +108,10 @@ function App() {
             </div>
           </div>
           <div className='flex flex-col'>
-            <label>Query Type</label>
+            <label htmlFor='query-type'>Query Type</label>
             <div className='flex gap-3 flex-col md:flex-row'>
               <div
+                id='query-type'
                 onClick={(e) => e.stopPropagation()}
                 className={`${
                   curActive === "generalEnquiry" ? "border-Green600 bg-Green200" : ""
@@ -116,8 +120,8 @@ function App() {
                 } flex flex-row flex-grow items-center border-[.5px] border-Grey500 hover:border-Green600 focus:border-Green600 focus:bg-Green200 focus:outline-none  rounded-md`}
               >
                 <input
-                  name='queryType'
-                  id='generalEnquiry'
+                  name='query-type'
+                  id='general-enquiry'
                   type='radio'
                   ref={queryEnqInput}
                   className='border-[.5px] accent-Green600 border-Grey500  h-8 rounded-md ml-5 mr-3'
@@ -125,7 +129,7 @@ function App() {
                   required
                 ></input>
                 <label
-                  htmlFor='generalEnquiry'
+                  htmlFor='general-enquiry'
                   className='select-none after:content-none w-full text-sm p-2 pl-0 m-0'
                 >
                   General Enquiry
@@ -141,7 +145,7 @@ function App() {
               >
                 <input
                   name='queryType'
-                  id='supportRequest'
+                  id='support-request'
                   type='radio'
                   ref={querySuppInput}
                   className='border-[.5px] accent-Green600 border-Grey500 h-8 rounded-md ml-5 mr-3 group-active:active'
@@ -149,7 +153,7 @@ function App() {
                   onChange={(e) => setCurActive(e.target.id)}
                 ></input>
                 <label
-                  htmlFor='supportRequest'
+                  htmlFor='support-request'
                   className='select-none after:content-none w-full text-sm p-2 pl-0 m-0'
                 >
                   Support Request
@@ -161,8 +165,9 @@ function App() {
             </a>
           </div>
           <div className='flex flex-col'>
-            <label>Message</label>
+            <label htmlFor='message'>Message</label>
             <textarea
+              id='message'
               required
               ref={messageInput}
               className={`
